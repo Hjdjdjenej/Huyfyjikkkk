@@ -1,4 +1,4 @@
-ح
+
 import os,requests,sys,time,datetime
 now = datetime.datetime.today()
 an = datetime.datetime.now()
